@@ -1,7 +1,7 @@
 import Modal from "@/components/Modal";
 import PriceInfoCard from "@/components/PriceInfoCard";
 import ProductCard from "@/components/ProductCard";
-import { getProductById, getsimilarProducts } from "@/lib/actions"
+import { getProductById, getSimilarProducts } from "@/lib/actions"
 import { formatNumber } from "@/lib/utils";
 import { Product } from "@/types";
 import Image from "next/image";
@@ -17,7 +17,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
 
   if(!product) redirect('/')
 
-  const similarProducts = await getsimilarProducts(id);
+  const similarProducts = await getSimilarProducts(id);
 
   return (
     <div className="product-container">

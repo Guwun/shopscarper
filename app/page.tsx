@@ -2,11 +2,11 @@ import HeroCarousel from "@/components/HeroCarousel";
 import Searchbar from "@/components/searchbar";
 import StaticGenerationSearchParamsBailoutProvider from "next/dist/client/components/static-generation-searchparams-bailout-provider";
 import Image from "next/image";
-import { getAllproducts } from "@/lib/actions";
+import { getAllProducts } from "@/lib/actions";
 import ProductCard from "@/components/ProductCard";
 
 const Home = async () => {
-  const allProducts = await getAllproducts();
+  const allProducts = await getAllProducts();
   return (
     <>
       <section className="px-6 md:px-20 py-24 ">
